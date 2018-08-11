@@ -9,6 +9,7 @@
             <li v-for="name in names" v-text="name"></li>
         </ul>
         <input id="input" type="text" v-model="newName">
+        <!--Can use @click instead of v-on:click-->
         <button v-on:click="addName">Add name</button>
 </div>
 
@@ -26,6 +27,7 @@
         methods: {
             addName() {
                 this.names.push(this.newName);
+                this.newName = '';
             }
         },
     });
